@@ -31,7 +31,7 @@ const AdminPannelPost = ({travelLog}, props) => {
     formData.append('approved', true)
 
     //create new doc in new collection
-    const response = await fetch("/api/travelLogs/toAdmin",{
+    const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/toAdmin",{
       method:'POST',
       body:formData,
       headers:{
@@ -89,7 +89,7 @@ const AdminPannelPost = ({travelLog}, props) => {
     formData4.append('approved', false)
 
     //create new doc in new collection
-    const response4 = await fetch("/api/travelLogs/toAdmin",{
+    const response4 = await fetch("https://travelog-backend.onrender.com/api/travelLogs/toAdmin",{
       method:'POST',
       body:formData4,
       headers:{
@@ -107,7 +107,7 @@ const AdminPannelPost = ({travelLog}, props) => {
 
     //update existing doc in existing collection
 
-    const response3 = await fetch("/api/travelLogs/adminApproved/rejected/" + travelLog._id,{
+    const response3 = await fetch("https://travelog-backend.onrender.com/api/travelLogs/adminApproved/rejected/" + travelLog._id,{
       method: "PATCH",
       body:formData3,
       headers:{

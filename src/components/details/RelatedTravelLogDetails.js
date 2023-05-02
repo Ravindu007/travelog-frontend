@@ -38,7 +38,7 @@ const RelatedTravelLogDetails = ({relatedTravelLog}, props) => {
     formData.append('desc', draftDesc)
     formData.append('image', draftImage)
 
-    const response = await fetch("/api/travelLogs/" + relatedTravelLog._id, {
+    const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/" + relatedTravelLog._id, {
       method:"PATCH",
       body:formData,
       headers:{
@@ -61,7 +61,7 @@ const RelatedTravelLogDetails = ({relatedTravelLog}, props) => {
 
       try{
            // errors happens because ids are not same
-           const response2 = await fetch("/api/travelLogs/adminApproved/" + relatedTravelLog.related_id,{
+           const response2 = await fetch("https://travelog-backend.onrender.com/api/travelLogs/adminApproved/" + relatedTravelLog.related_id,{
             method:"DELETE",
             headers:{
               'Authorization': `${user.email} ${user.token}`
@@ -72,7 +72,7 @@ const RelatedTravelLogDetails = ({relatedTravelLog}, props) => {
             throw new Error(`Failed to delete travel log: ${response2.statusText}`)
           }
 
-          const response1 = await fetch("/api/travelLogs/" + relatedTravelLog._id,{
+          const response1 = await fetch("https://travelog-backend.onrender.com/api/travelLogs/" + relatedTravelLog._id,{
             method:"DELETE",
             headers:{
               'Authorization': `${user.email} ${user.token}`

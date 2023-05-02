@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(()=>{
 
     const fetchTravelLogs = async() => {
-      const response = await fetch("/api/travelLogs/", {
+      const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/", {
         headers:{
           'Authorization': `${user.email} ${user.token}`
         }

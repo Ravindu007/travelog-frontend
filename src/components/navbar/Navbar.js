@@ -27,7 +27,7 @@ const Navbar = ({isAdmin}) => {
   const submitSearch = async(e) => {
     e.preventDefault()
 
-    const response = await fetch(`/api/travelLogs/searched?searchTerm=${searchTerm}`, {
+    const response = await fetch(`https://travelog-backend.onrender.com/api/travelLogs/searched?searchTerm=${searchTerm}`, {
       method:"GET",
       headers:{
         'Authorization':`${user.email} ${user.token}`

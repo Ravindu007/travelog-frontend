@@ -31,7 +31,7 @@ const View = () => {
   useEffect(()=>{
 
     const fetchSingleTravelLogs = async() => {
-      const response = await fetch("/api/travelLogs/singlePost/" + id, {
+      const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/singlePost/" + id, {
         headers:{
           'Authorization': `${user.email} ${user.token}`
         }
@@ -46,7 +46,7 @@ const View = () => {
     }
 
     const fetchAllComments = async() => {
-      const response = await fetch("/api/travelLogs/comments",{
+      const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/comments",{
         headers:{
           'Authorization': `${user.email} ${user.token}`
         }
@@ -87,7 +87,7 @@ const View = () => {
     formData.append('post_id' ,fetchedTravelLog._id )
 
 
-    const response = await fetch("/api/travelLogs/comments", {
+    const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/comments", {
       method:"POST",
       body:formData,
       headers:{

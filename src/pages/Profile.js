@@ -20,7 +20,7 @@ const Profile = () => {
 
     const fetchTravelLogs = async() => {
       //data fetched from backend (filter by id)
-      const response = await fetch("/api/travelLogs/related",{
+      const response = await fetch("https://travelog-backend.onrender.com/api/travelLogs/related",{
         headers:{
           'Authorization': `${user.email} ${user.token}`
         }
