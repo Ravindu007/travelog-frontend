@@ -50,7 +50,7 @@ const AdminPannelPost = ({travelLog}, props) => {
     formDataForPatchRequest.append("approval", true)
     formDataForPatchRequest.append("related_id",related_id) //similar field to make reference
 
-    const response2 = await fetch("/api/travelLogs/adminApproved/" + travelLog._id, {
+    const response2 = await fetch("https://travelog-backend.onrender.com/api/travelLogs/adminApproved/" + travelLog._id, {
       method:"PATCH",
       body:formDataForPatchRequest,
       headers:{
