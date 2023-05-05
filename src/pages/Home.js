@@ -37,7 +37,7 @@ const Home = () => {
   },[dispatch, user])
   
   return (
-    <div className='home'>
+    <div className='home' style={{overflowX:"hidden"}}>
       {loading ? (
         <p>LOADING....</p>
       ):(

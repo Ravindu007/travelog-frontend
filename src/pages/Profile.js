@@ -39,8 +39,8 @@ const Profile = () => {
   },[dispatch, user])
 
   return (
-    <div className="row">
-      <div className="col-8">
+    <div className="row" style={{padding:"10px"}}>
+      <div className="col-sm-12 col-md-8" style={{order:"2"}}>
         {loading ? (
           <p>LOADING....</p>
         ) : (
@@ -52,7 +52,7 @@ const Profile = () => {
         )
         }
       </div>
-      <div className="col-4">
+      <div className="col-sm-12 col-md-4" style={{order:"1"}}>
         <TravelLogForm/>
       </div>
     </div>

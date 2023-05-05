@@ -128,7 +128,7 @@ const View = () => {
             </div>
             <div className="row commentsPart">
               <div className="comments col-sm-12">
-                <p>Comments</p>
+                <p style={{fontWeight:"800"}}>Comments</p>
                 {isCommentsLoading ? (
                   <p>Loading</p>
                 ) : (
